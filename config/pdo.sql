@@ -12,5 +12,6 @@ CREATE TABLE `product` (
                            `name` varchar(255) NOT NULL,
                            `size` int NOT NULL DEFAULT 0,
                            `is_available` BOOLEAN NOT NULL DEFAULT FALSE,
+                           `last_update` TIMESTAMP(6)  NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6),
                            PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
