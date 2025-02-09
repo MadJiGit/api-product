@@ -1,0 +1,5 @@
+# api-product
+*.htaccess
+*.idea/
+config/db.ini.php
+vendor/*
