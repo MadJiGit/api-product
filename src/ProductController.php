@@ -6,6 +6,11 @@ class ProductController
     {}
 
 
+    /**
+     * @param string $method
+     * @param string|null $id
+     * @return void
+     */
     public function processRequest(string $method, ?string $id): void
     {
         if($id){
@@ -15,6 +20,11 @@ class ProductController
         }
     }
 
+    /**
+     * @param string $method
+     * @param string $id
+     * @return void
+     */
     private function processResourceRequest(string $method, string $id): void
     {
         $product = $this->gateway->getProductWithId($id);
@@ -54,6 +64,10 @@ class ProductController
 
     }
 
+    /**
+     * @param string $method
+     * @return void
+     */
     private function processCollectionRequest(string $method): void
     {
         switch ($method){
@@ -79,6 +93,11 @@ class ProductController
         }
     }
 
+    /**
+     * @param array $data
+     * @param bool $is_new
+     * @return array
+     */
     private function getValidationErrors(array $data, bool $is_new = true): array
     {
         $errors = array();
